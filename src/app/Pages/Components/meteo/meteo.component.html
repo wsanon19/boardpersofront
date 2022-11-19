@@ -1,0 +1,32 @@
+<mat-grid-list class="grid1" cols="2" rowHeight="200px" >
+  <mat-grid-tile
+      *ngFor="let meteo of listMeteo">
+      <mat-card class="example-card">
+        <mat-card-title-group>
+          <mat-card-title>{{meteo.summary}}</mat-card-title>
+          <mat-card-subtitle>{{meteo.date}}</mat-card-subtitle>
+          <img class="img_1" src="../assets/images/pngegg.png"/>
+        </mat-card-title-group>
+        <mat-card-content>
+
+            <mat-chip-list aria-label="Meteo selection">
+                <mat-chip>
+                  <mat-icon>cloud_queue</mat-icon>
+                   °C = {{meteo.temperatureC}}
+                </mat-chip>
+                <mat-chip color="primary">
+                  <mat-icon>cloud_queue</mat-icon>
+                  °F = {{meteo.temperatureF}}
+                </mat-chip>
+              </mat-chip-list>
+          
+        </mat-card-content>
+      </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+
+
+
+
+
