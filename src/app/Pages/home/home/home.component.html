@@ -1,5 +1,4 @@
 <mat-toolbar>
-
     <button mat-icon-button *ngIf="sidenav.mode === 'over'" (click)="sidenav.toggle()">
         <mat-icon *ngIf="!sidenav.opened">
             menu
@@ -9,54 +8,68 @@
         </mat-icon>
     </button>
 
-
-    <h1>Découvrez Moi !</h1> 
-
-    
-
-
-    
+    <h1>Découvrez Moi !</h1>
 </mat-toolbar>
 
-    <mat-sidenav-container>
+<mat-sidenav-container>
 
-        <mat-sidenav #sidenav mode="side" opened class="mat-elevation-z8">
+    <mat-sidenav #sidenav mode="side" opened class="mat-elevation-z8">
 
-            <img class="avatar mat-elevation-z8" src="https://i.ibb.co/8jFXypz/IDupdtae.png" />
+  <img class="avatar mat-elevation-z8" src="https://i.ibb.co/8jFXypz/IDupdtae.png" />
             <!-- <a href="https://imgbb.com/"><img src="https://i.ibb.co/HXDk6Qh/ID.png" alt="ID" border="0" /></a> -->
             <!-- <a href="https://ibb.co/t3MWg5L"><img src="https://i.ibb.co/t3MWg5L/ID.png" alt="ID" border="0" /></a> -->
-            <h4 class="name">Wilfried SANON</h4>
-            <p class="designation">Software Engineer</p>
+  <h1 class="name">Wilfried SANON</h1>
+  <p class="designation">Software Engineer</p>
 
-            <mat-divider></mat-divider>
+  <mat-divider></mat-divider>
 
 
-            <button mat-button class="menu-button">
-                <mat-icon>home</mat-icon>
-                <span>Home</span>
-            </button>
-            <button mat-button class="menu-button">
-                <mat-icon>person</mat-icon>
-                <span>Profile</span>
-            </button>
-            <button mat-button class="menu-button">
-                <mat-icon>info</mat-icon>
-                <span>About</span>
-            </button>
-        
-            <mat-divider></mat-divider>
-        
-            <button mat-button class="menu-button">
-                <mat-icon>help</mat-icon>
-                <span>Help</span>
-            </button>
-        
-        </mat-sidenav>
+  <button mat-button class="menu-button">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+  <button mat-button class="menu-button">
+    <mat-icon>person</mat-icon>
+    <span>Profile</span>
+  </button>
+  <button mat-button class="menu-button">
+    <mat-icon>info</mat-icon>
+    <span>About</span>
+  </button>
 
-        
-        <mat-sidenav-content>
-            <div class="content mat-elevation-z8">
-               <app-meteo></app-meteo>
+  <mat-divider></mat-divider>
+
+  <button mat-button class="menu-button">
+    <mat-icon>help</mat-icon>
+    <span>Help</span>
+  </button>
+
+  </mat-sidenav>
+      <mat-sidenav-content>
+        <div class="main">
+          <div class="main-row-1">
+            <div class="main-content-1 mat-elevation-z8">
+              <mat-spinner></mat-spinner>
             </div>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
+            <div class="main-content-2 mat-elevation-z8">
+              <mat-spinner></mat-spinner>
+            </div>
+          </div>
+
+          <div class="main-row-2">
+            <div class="main-content-3 mat-elevation-z8">
+              <mat-spinner></mat-spinner>
+            </div>
+            <div class="main-content-4 mat-elevation-z8">
+              <mat-spinner></mat-spinner>
+            </div>
+
+          </div>
+
+
+
+        </div>
+
+      </mat-sidenav-content>
+</mat-sidenav-container>
+

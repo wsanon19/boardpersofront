@@ -9,6 +9,8 @@ import { NavMenuComponent } from './Layout/nav-menu/nav-menu.component';
 import { HomeComponent } from './Pages/home/home/home.component';
 import { MeteoComponent } from './Pages/Components/meteo/meteo.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjetComponent } from './Pages/Components/projet/projet.component';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -16,14 +18,16 @@ import { HttpClientModule } from '@angular/common/http';
     NavMenuComponent,
     HomeComponent,
     MeteoComponent,
-    
+    ProjetComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
