@@ -19,6 +19,8 @@ export class HomeComponent implements OnInit {
   @ViewChild(MatSidenav)
   sidenav!: MatSidenav;
 
+
+
    constructor(private observer: BreakpointObserver) {}
 
   tiles: Tile[] = [

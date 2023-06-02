@@ -1,32 +1,23 @@
-<mat-grid-list class="grid1" cols="2" rowHeight="200px" >
-  <mat-grid-tile
-      *ngFor="let meteo of listMeteo">
-      <mat-card class="example-card">
-        <mat-card-title-group>
-          <mat-card-title>{{meteo.summary}}</mat-card-title>
-          <mat-card-subtitle>{{meteo.date}}</mat-card-subtitle>
-          <img class="img_1" src="../assets/images/pngegg.png"/>
-        </mat-card-title-group>
-        <mat-card-content>
-
-            <mat-chip-list aria-label="Meteo selection">
-                <mat-chip>
-                  <mat-icon>cloud_queue</mat-icon>
-                   °C = {{meteo.temperatureC}}
-                </mat-chip>
-                <mat-chip color="primary">
-                  <mat-icon>cloud_queue</mat-icon>
-                  °F = {{meteo.temperatureF}}
-                </mat-chip>
-              </mat-chip-list>
-          
-        </mat-card-content>
-      </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
+<div class="main-content-2 mat-elevation-z8">
+  <!--              <mat-spinner></mat-spinner>-->
+  <div class="main-content-2-row-1">
+    <p>Paris</p>
+    <p>{{ myDate | date: 'short' }}</p>
+  </div>
+  <div class="main-content-2-row-2">
+    <p class="tmp">13°C</p>
+    <p>Stormy</p>
+  </div>
+  <div class="main-content-2-row-3">
+    <div class="main-content-2-row-3-metrics">
+      <span><mat-icon fontIcon="air"></mat-icon> &nbsp; 50 km/h</span>
+      <span><mat-icon fontIcon="water-drop"></mat-icon> &nbsp; 40%</span>
+      <span><mat-icon fontIcon="cloud"></mat-icon> &nbsp; 10%</span>
+    </div>
+    <div class="main-content-2-row-3-img">
+      <img class="im" src="https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0001_sunny.png">
+    </div>
 
 
-
-
-
-
+  </div>
+</div>

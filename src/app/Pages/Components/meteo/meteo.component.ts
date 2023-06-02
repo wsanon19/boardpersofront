@@ -10,16 +10,22 @@ import { Meteo } from './meteo';
 })
 export class MeteoComponent implements OnInit {
 
+  myDate: Date;
+
   cheminImage:any = "pngegg.png";
 
   public listMeteo!: Meteo[] ;
 
   constructor(private meteoService: MeteoService) {
+    this.myDate = new Date();
 
    }
 
   ngOnInit(): void {
-    this.getMeteo();
+    // this.getMeteo();
+    setInterval( () => {
+      this.myDate = new Date();
+    }, 1000);
   }
 
   public getMeteo() : void {
@@ -28,7 +34,7 @@ export class MeteoComponent implements OnInit {
         console.warn(response);
         this.listMeteo = response;}
     )
-    
+
   }
 
 }
