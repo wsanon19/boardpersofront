@@ -5,7 +5,7 @@ COPY ./package.json .
 RUN npm install
 RUN npm install -g @angular/cli
 COPY . .
-RUN npm build
+RUN npm run build
 
 #stage 2
 FROM nginx:stable-alpine
