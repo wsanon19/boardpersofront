@@ -10,6 +10,6 @@ RUN npm run build
 #stage 2
 FROM nginx:stable-alpine
 WORKDIR /usr/share/nginx/html
-COPY --from=node /app/dist/board-perso .
+COPY --from=node /app/dist/board_perso .
 EXPOSE 80
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
